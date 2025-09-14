@@ -93,4 +93,20 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public int hasContact2(int phone) {
+        int i = 0;
+        int result = -1;
+        boolean found = false;
+        while (i<counter && !found)
+            if (contacts[i].getPhone()==phone)
+                found = true;
+            else
+                i++;
+        if (found) result = i;
+        return result;
+    }
+
+    public boolean getName(int index) {
+        return false;
+    }
 }
