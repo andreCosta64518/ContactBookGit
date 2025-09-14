@@ -106,7 +106,12 @@ public class ContactBook {
         return result;
     }
 
-    public boolean getName(int index) {
-        return false;
+    public String getName(int phone) {
+        int index = hasContact2(phone);
+        return contacts[index].getName();
+    }
+
+    public boolean hasEqualPhones() {
+    return false;
     }
 }
