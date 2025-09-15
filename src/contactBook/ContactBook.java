@@ -112,6 +112,17 @@ public class ContactBook {
     }
 
     public boolean hasEqualPhones() {
-    return false;
+
+        for(Contact contact : contacts){
+            if(contact ==  null) return false;
+            int num1 = contact.getPhone();
+            for(Contact contact2 : contacts){
+                if(contact2 == null) break;
+                if(contact == contact2) continue;
+                int num2 = contact2.getPhone();
+                if(num1==num2) return true;
+            }
+        }
+        return false;
     }
 }
